@@ -1,0 +1,29 @@
+spec:
+  inputs:
+    width:
+      type: number
+      default: 100
+    height:
+      type: number
+      default: 100
+    length:
+      type: number
+      default: 100
+  outputs:
+    frame_files:
+      type: array
+---
+run:
+  - name: simulation
+    step: ./simulation.yml
+    inputs:
+      width: ${{ inputs.width }}
+      height: ${{ inputs.height }}
+      length: ${{ inputs.length }}
+      filename: simulation.json
+  - name: frames
+    step: ./frames
+    inputs:
+      filename: simulation.json
+outputs:
+  frame_files: ${{ steps.frames.outputs.frame_files }}

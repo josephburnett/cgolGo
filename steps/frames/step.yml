@@ -1,0 +1,17 @@
+spec:
+  inputs:
+    filename:
+      type: string
+  outputs:
+    frame_files:
+      type: array
+---
+exec:
+  command:
+    - ${{ step_dir }}/../../bin/frames
+    - --name
+    - frame_files
+    - --value-file
+    - ${{ inputs.filename }}
+    - --output-file
+    - ${{ output_file }}

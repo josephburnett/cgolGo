@@ -1,0 +1,26 @@
+spec:
+  inputs:
+    width:
+      type: number
+      default: 100
+    height:
+      type: number
+      default: 100
+    length:
+      type: number
+      default: 1000
+    filename:
+      type: string
+---
+exec:
+  command:
+    # https://github.com/josephburnett/cgolGo/tree/output-file
+    - ${{ step_dir }}/../../bin/cgol
+    - -w
+    - ${{ inputs.width }}
+    - -h
+    - ${{ inputs.height }}
+    - -d
+    - ${{ inputs.length }}
+    - -j
+    - ${{ inputs.filename }}
