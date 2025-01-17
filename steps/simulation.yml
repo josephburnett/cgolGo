@@ -15,7 +15,7 @@ spec:
 exec:
   command:
     # https://github.com/josephburnett/cgolGo/tree/output-file
-    - ${{ step_dir }}/../../bin/cgol
+    - ${{ step_dir }}/../bin/cgol
     - -w
     - ${{ inputs.width }}
     - -h
