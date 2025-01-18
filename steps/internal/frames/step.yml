@@ -8,7 +8,7 @@ spec:
 ---
 exec:
   command:
-    - ${{ step_dir }}/../../bin/frames
+    - ${{ step_dir }}/../../../bin/frames
     - --name
     - frame_files
     - --value-file

@@ -20,14 +20,14 @@ spec:
 
 run:
   - name: simulation
-    step: ./simulation.yml
+    step: ./internal/simulation.yml
     inputs:
       width: ${{ inputs.width }}
       height: ${{ inputs.height }}
       length: ${{ inputs.length }}
       filename: simulation.json
   - name: frames
-    step: ./frames
+    step: ./internal/frames
     inputs:
       filename: simulation.json
 outputs:
