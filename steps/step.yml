@@ -1,18 +1,23 @@
 spec:
   inputs:
     width:
+      # Width in cells of the simulation.
       type: number
       default: 100
     height:
+      # Height in cells of the simulation.
       type: number
       default: 100
     length:
+      # Number of generations of the simulation.
       type: number
       default: 100
   outputs:
     frame_files:
+      # List of filenames created, one per generation.
       type: array
 ---
+
 run:
   - name: simulation
     step: ./simulation.yml
