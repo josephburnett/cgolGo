@@ -1,3 +1,5 @@
+# The internal `frames` step breaks the single output JSON file from
+# the `simulation` step into individual frames.
 spec:
   inputs:
     filename:
@@ -6,6 +8,7 @@ spec:
     frame_files:
       type: array
 ---
+
 exec:
   command:
     - ${{ step_dir }}/../../../bin/frames

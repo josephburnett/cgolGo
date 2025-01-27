@@ -1,3 +1,11 @@
+# `step` runs a simulation of Conway's Game of Life (CGOL). The
+# optional step inputs `width` and `height` determine the dimensions
+# of the simulation. The optional step input `length` determines the
+# number of generations in the simulation. The step output
+# `frame_files` is a list of filenames, each containing a single
+# generation represented as a JSON array (frame). The frame is a list
+# of lists containing either 1 or 0 for each cell representing alive
+# of dead.
 spec:
   inputs:
     width:

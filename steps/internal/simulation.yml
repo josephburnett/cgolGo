@@ -1,3 +1,4 @@
+# `simulation` is the internal step which runs the actual simulation.
 spec:
   inputs:
     width:
@@ -12,6 +13,7 @@ spec:
     filename:
       type: string
 ---
+
 exec:
   command:
     # https://github.com/josephburnett/cgolGo/tree/output-file
